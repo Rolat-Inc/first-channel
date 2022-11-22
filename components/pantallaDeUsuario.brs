@@ -9,10 +9,7 @@ sub init()
     m.secondScreen = m.top.findNode("loadSecondScreen")   
 end sub
 
-'commit de prueba
-
 function onKeyEvent(key as String, press as Boolean) as Boolean
-    print "pantalla del usuario "; key
     handled = false
     if press then         
         if m.userOne.isInFocusChain() then
