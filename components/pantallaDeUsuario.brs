@@ -1,86 +1,73 @@
 sub init()
-    m.posterUserOne = m.top.findNode("imagen_de_usuario1")
-    m.posterUserTwo = m.top.findNode("imagen_de_usuario2")
-    m.posterUserThree = m.top.findNode("imagen_de_usaurio3")
-    m.posterUserFour = m.top.findNode("imagen_de_usuario4")
-    m.userSelection = m.top.findNode("userSelection")
-    m.manageUsers = m.top.findNode("editarUsuarios")
-
-    m.top.observeField("focusedChild", "onFocusedChildChanged")
-
-    focusOn ()
-
+    m.userOne = m.top.findNode("userOne")
+    m.userTwo = m.top.findNode("userTwo")
+    m.userThree = m.top.findNode("userThree")
+    m.userFour = m.top.findNode("userFour")
+    m.userOne.setFocus(true)
+    m.posterUSer = m.top.findNode("posterUser")
+    m.msWelcome = m.top.findNode("msWelcome")
+    m.secondScreen = m.top.findNode("loadSecondScreen")   
 end sub
 
-sub focusOn ()
-        m.posterUserOne.setFocus(true)
-        m.posterUserOne.colorUser = "1"
-        m.userSelection.visible =  true
-        m.userSelection.translation = [261,398]
-        
-    
-end sub
+'commit de prueba
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
+    print "pantalla del usuario "; key
     handled = false
-
-    if press then
-        
-        if m.posterUserOne.hasFocus()
-            if key = "right" then
-                m.posterUserTwo.setFocus(true)
-                m.posterUserTwo.colorUser = "1"
-                m.posterUserOne.colorUser = "0.3"
-                m.userSelection.translation = [630,398] 
+    if press then         
+        if m.userOne.isInFocusChain() then
+            if key = "OK" then
+                if  m.userOne.pencilHasFocus = true then
+                        offFirstScreen()
+                        m.secondScreen.userEditName = m.userOne.profileName
+                        m.secondScreen.userPoster = m.userOne.locateImage
+                end if    
+            else if key = "right" then
+                m.userTwo.setFocus(true)
             end if
-
-        else if m.posterUserTwo.hasFocus() then
-            if key = "right" then
-                m.posterUserThree.setFocus(true)
-                m.posterUserThree.colorUser = "1"
-                m.posterUserTwo.colorUser = "0.3"
-                m.userSelection.translation = [999,398]            
+        else if m.userTwo.isInFocusChain() then
+            if key = "OK" then
+                if  m.userTwo.pencilHasFocus = true then
+                         offFirstScreen()
+                         m.secondScreen.userEditName = m.userTwo.profileName
+                        m.secondScreen.userPoster = m.userTwo.locateImage
+                end if
+            else if key = "right" then
+                m.userThree.setFocus(true)      
             else if key = "left" then
-                 m.posterUserOne.setFocus(true)
-                 m.posterUserOne.colorUser = "1"
-                 m.posterUserTwo.colorUser = "0.3"
-                 m.userSelection.translation = [261,398] 
-            end if  
-        
-        
-        else if m.posterUserThree.hasFocus()then
-            if key = "right" then
-                m.posterUserFour.setFocus(true)
-                m.posterUserFour.colorUser = "1"
-                m.posterUserThree.colorUser= "0.3"
-                m.userSelection.translation = [1368,398]            
+                m.userOne.setFocus(true)
+            end if       
+        else if m.userThree.isInFocusChain()then
+            if key = "OK" then
+                if  m.userThree.pencilHasFocus = true then
+                        offFirstScreen()
+                        m.secondScreen.userEditName = m.userThree.profileName
+                        m.secondScreen.userPoster = m.userThree.locateImage
+                end if
+            else if key = "right" then
+                m.userFour.setFocus(true)    
             else if key = "left" then
-                 m.posterUserTwo.setFocus(true)
-                 m.posterUserTwo.colorUser = "1"
-                 m.posterUserThree.colorUser = "0.3"
-                 m.userSelection.translation = [630,398] 
+                m.userTwo.setFocus(true)
             end if  
-       
-
-        else if m.posterUserFour.hasFocus()then
-                     
-            if key = "left" then
-                 m.posterUserThree.setFocus(true)
-                 m.posterUserThree.colorUser = "1"
-                 m.posterUserFour.colorUser = "0.3"
-                 m.userSelection.translation = [999,398]     
+        else if m.userFour.isInFocusChain()then  
+            if key = "OK" then
+                if  m.userFour.pencilHasFocus = true then
+                        offFirstScreen()
+                        m.secondScreen.userEditName = m.userFour.profileName
+                        m.secondScreen.userPoster = m.userFour.locateImage
+                end if               
+            else if key = "left" then
+                m.userThree.setFocus(true)
             end if
-        end if  
-
-        if key = "down" then
-            m.manageUsers.opacity = "1"
-        else 
-            m.manageUsers.opacity = "0.5"
-        end if  
-
+        end if 
     end if
-    return handled
-
+  return handled
 end function
 
+
+sub offFirstScreen()
+        m.msWelcome.visible = false
+        m.posterUSer.visible = false
+        m.secondScreen.visible = true
+    end sub
 

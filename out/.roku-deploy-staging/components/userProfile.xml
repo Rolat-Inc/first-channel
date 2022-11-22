@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="UserProfile" extends="Group" >
+
+    <interface>
+        <field id="locateImage" type="string" alias="userImage.uri" />   
+        <field id="positionImage" type="string" alias="userImage.translation" />     
+        <field id="colorUser" type="string" alias="userImage.opacity" />
+        <field id="profileName" type="string" alias="userName.text" />
+        <field id="namePosition" type="string" alias="userName.translation" />
+        <field id="pencilHasFocus" type="boolean"/>
+    </interface>
+
+    <script type="text/brightscript" uri="userProfile.brs" /> 
+
+    <children>  
+        <Rectangle
+            id="userSelection"
+            color="0xFFFAE7"
+            width="315"
+            height="255"
+            visible= "false" 
+            opacity= "1" 
+            translation = "[208, 398]" />
+        <Poster
+            id = "userImage"
+            width = "310"
+            height = "250" 
+            opacity = "0.3"
+            translation = "[210, 400]" />      
+        <Label 
+            id= "userName"
+            height ="30"
+            opacity = "0.3"
+            color = "0x7D9D9C" 
+            translation = "[285, 670]"/>  
+        <Poster  
+            id="editUser"
+            uri = "pkg:/images/chooseProfile.jpg"
+            translation="[320,820]"
+            opacity = "0.3"
+            visible = "false" />       
+    </children>
+</component>
