@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="PantallaDeUsuario" extends="Scene" >
+
+  <script type="text/brightscript" uri="pantallaDeUsuario.brs" /> 
+
+  <children>
+    <Poster
+        id = "posterFirst"
+        translation="[-19,-63]"
+        height= "200"
+        width="240"
+        uri="pkg:/images/firstScenelogo.png" />
+            
+    <Label
+        height="50"
+        text = "¿Quién eres? Elige tu perfil:"
+        translation="[680,200]" />
+
+    <Rectangle
+        id="userSelection"
+        color="0xFFFAE7"
+        width="315"
+        height="255"
+        visible= "true" 
+        opacity= "1" />
+        
+    <userProfile
+        id = "imagen_de_usuario1"
+        locateImage = "pkg:/images/usuario1.jpg"
+        positionImage ="[263, 400]"
+        profileName = "Manuela"      
+        positionName = "[350, 680]" 
+        colorUser = "0.3" />
+    
+    <userProfile
+        id = "imagen_de_usuario2"
+        locateImage = "pkg:/images/usuario2.jpg"
+        positionImage ="[632, 400]"
+        profileName = "Feliciano"      
+        positionName = "[715, 680]" 
+        colorUser = "0.3" />
+
+    <userProfile
+        id = "imagen_de_usaurio3"
+        locateImage = "pkg:/images/usuario3.jpg"
+        positionImage ="[1001, 400]"
+        profileName = "Ingrith"      
+        positionName = "[1070, 680]" 
+        colorUser = "0.3" />
+
+    <userProfile
+        id = "imagen_de_usuario4"
+        locateImage = "pkg:/images/usuario4.jpg"
+        positionImage ="[1370, 400]"
+        profileName = "Roberto Carlos"      
+        positionName = "[1455, 680]"
+        colorUser = "0.3" />
+
+    <Label
+        id="editarUsuarios"
+        height="30"
+        opacity="0.3"
+        font="font:MediumBoldSystemFont"
+        text = "Administrar usuarios"
+        translation="[750,880]" />   
+        
+  </children>
+  
+</component>

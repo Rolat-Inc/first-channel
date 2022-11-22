@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="UserProfile" extends="Group" >
+
+    <interface>
+        <field id="locateImage" type="string" alias="userImage.uri" />   
+        <field id="positionImage" type="string" alias="userImage.translation" />   
+        <field id="profileName" type="string" alias="userName.text" />    
+        <field id="positionName" type="string" alias="userName.translation" />
+        <field id="colorUser" type="string" alias="userImage.opacity" />
+    </interface>
+
+    <script type="text/brightscript" uri="userProfile.brs" /> 
+
+    <children>
+     
+        <Poster
+            id = "userImage"
+            width = "310"
+            height = "250" />
+         <Label       
+            id= "userName"
+            height ="30"
+            color = "0x7D9D9C"
+            translation ="[0,680]" />  
+                
+           
+    </children>
+</component>
