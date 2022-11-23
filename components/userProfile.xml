@@ -19,26 +19,26 @@
             color="0xFFFAE7"
             width="315"
             height="255"
-            visible= "false" 
-            opacity= "1" 
-            translation = "[208, 398]" />
+            visible="false" 
+            opacity="1" 
+            translation="[208, 398]" />
         <Poster
-            id = "userImage"
-            width = "310"
-            height = "250" 
-            opacity = "0.3"
-            translation = "[210, 400]" />      
+            id="userImage"
+            width="310"
+            height="250" 
+            opacity="0.3"
+            translation="[210, 400]" />      
         <Label 
-            id= "userName"
-            height ="30"
-            opacity = "0.3"
-            color = "0x7D9D9C" 
-            translation = "[285, 670]"/>  
+            id="userName"
+            height="30"
+            opacity="0.3"
+            color="0x7D9D9C" 
+            translation="[285, 670]"/>  
         <Poster  
             id="editUser"
-            uri = "pkg:/images/chooseProfile.jpg"
+            uri="pkg:/images/chooseProfile.jpg"
             translation="[320,820]"
-            opacity = "0.3"
-            visible = "false" />       
+            opacity="0.3"
+            visible="false" />       
     </children>
 </component>
