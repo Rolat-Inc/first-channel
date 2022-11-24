@@ -20,30 +20,30 @@
             visible="true" />
         <LayoutGroup
             id="posterUser"
+            translation="[180, 400]"
             layoutDirection="horiz"
-            translation="[210, 400]"
-            itemSpacings="110" 
-            visible="true" >
+            horizAlignment="left"
+            itemSpacings="[100]"
+            visible="true">
             <UserProfile 
                 id="userOne" 
                 locateImage="pkg:/images/usuario1.jpg" 
-                profileName="Fernanda" 
-                 />
+                profileName="Fernanda" />
             <UserProfile 
                 id="userTwo" 
                 locateImage="pkg:/images/usuario2.jpg" 
                 profileName="Mariano"
-                namePosition="[300, 670]" />
+                 />
             <UserProfile 
                 id="userThree" 
                 locateImage="pkg:/images/usuario3.jpg" 
                 profileName="Camila" 
-                namePosition="[303, 670]" />
+                 />
             <UserProfile 
                 id="userFour" 
                 locateImage="pkg:/images/usuario4.jpg" 
                 profileName="Juan Pablo"
-                namePosition="[269, 670]" />
+                 />
         </LayoutGroup>        
         <EditUserProfile 
             id="loadSecondScreen"

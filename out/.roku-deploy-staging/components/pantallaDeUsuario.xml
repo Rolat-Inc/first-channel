@@ -5,58 +5,48 @@
     <script type="text/brightscript" uri="pantallaDeUsuario.brs" /> 
 
     <children>
-      
         <Poster
-            id = "posterFirst"
+            id="posterFirst"
             translation="[9,-53]"
-            height= "220"
+            height="220"
             width="270" 
-            uri="pkg:/images/firstScenelogo.png" />
-                
+            uri="pkg:/images/firstScenelogo.png" />  
         <Label
-            id= "msWelcome"
+            id="msWelcome"
             height="50"
-            color = "0xF9F9F9"
-            text = "¿Quién quiere ver RupertFlix?:"
+            color="0xF9F9F9"
+            text="¿Quién quiere ver RupertFlix?:"
             translation="[680,200]" 
-            visible= "true" />
-    
+            visible="true" />
         <LayoutGroup
-            id = "posterUser"
-            layoutDirection = "horiz"
-            translation = "[210, 400]"
-            itemSpacings = "110" 
-            visible = "true" >
-
+            id="posterUser"
+            translation="[180, 400]"
+            layoutDirection="horiz"
+            horizAlignment="left"
+            itemSpacings="[100]"
+            visible="true">
             <UserProfile 
-                id = "userOne" 
-                locateImage = "pkg:/images/usuario1.jpg" 
-                profileName = "Fernanda" 
+                id="userOne" 
+                locateImage="pkg:/images/usuario1.jpg" 
+                profileName="Fernanda" />
+            <UserProfile 
+                id="userTwo" 
+                locateImage="pkg:/images/usuario2.jpg" 
+                profileName="Mariano"
                  />
-
             <UserProfile 
-                id = "userTwo" 
-                locateImage = "pkg:/images/usuario2.jpg" 
-                profileName = "Mariano"
-                namePosition = "[300, 670]" />
-
+                id="userThree" 
+                locateImage="pkg:/images/usuario3.jpg" 
+                profileName="Camila" 
+                 />
             <UserProfile 
-                id = "userThree" 
-                locateImage = "pkg:/images/usuario3.jpg" 
-                profileName = "Camila" 
-                namePosition = "[303, 670]" />
-
-            <UserProfile 
-                id = "userFour" 
-                locateImage = "pkg:/images/usuario4.jpg" 
-                profileName = "Juan Pablo"
-                namePosition = "[269, 670]" />
-        </LayoutGroup>
-         
+                id="userFour" 
+                locateImage="pkg:/images/usuario4.jpg" 
+                profileName="Juan Pablo"
+                 />
+        </LayoutGroup>        
         <EditUserProfile 
             id="loadSecondScreen"
-            visible = "false"/>   
-
+            visible="false"/>   
     </children>
-  
 </component>

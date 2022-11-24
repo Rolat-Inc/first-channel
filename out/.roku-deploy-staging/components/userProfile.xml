@@ -4,41 +4,48 @@
 
     <interface>
         <field id="locateImage" type="string" alias="userImage.uri" />   
-        <field id="positionImage" type="string" alias="userImage.translation" />     
         <field id="colorUser" type="string" alias="userImage.opacity" />
         <field id="profileName" type="string" alias="userName.text" />
-        <field id="namePosition" type="string" alias="userName.translation" />
         <field id="pencilHasFocus" type="boolean"/>
     </interface>
 
     <script type="text/brightscript" uri="userProfile.brs" /> 
 
     <children>  
+    <LayoutGroup
+        id="userProfileItem"
+        translation="[310, 400]"
+        layoutDirection="vert"
+        horizAlignment="center"
+        itemSpacings="[30]"
+        visible="true">
         <Rectangle
             id="userSelection"
             color="0xFFFAE7"
-            width="315"
-            height="255"
-            visible= "false" 
-            opacity= "1" 
-            translation = "[208, 398]" />
+            width="0"
+            height="0"
+            opacity="0.3">
         <Poster
-            id = "userImage"
-            width = "310"
-            height = "250" 
-            opacity = "0.3"
-            translation = "[210, 400]" />      
+            id="userImage"
+            width="309"
+            height="249"
+            visible="true"
+            translation ="[3,2]"/>                           
+    </Rectangle>
+        
         <Label 
-            id= "userName"
-            height ="30"
-            opacity = "0.3"
-            color = "0x7D9D9C" 
-            translation = "[285, 670]"/>  
-        <Poster  
-            id="editUser"
-            uri = "pkg:/images/chooseProfile.jpg"
-            translation="[320,820]"
-            opacity = "0.3"
-            visible = "false" />       
+            id="userName"
+            height="30"
+            opacity="0.3"
+            color="0x7D9D9C" 
+            visible="true">
+            <Poster  
+                id="editUser"
+                uri="pkg:/images/chooseProfile.jpg"
+                opacity="0.3"
+                visible="true"
+                translation="[38,140]"/>   
+        </Label>  
+    </LayoutGroup>
     </children>
 </component>
