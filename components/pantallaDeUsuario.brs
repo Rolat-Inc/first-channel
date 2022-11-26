@@ -4,9 +4,9 @@ sub init()
     m.userThree = m.top.findNode("userThree")
     m.userFour = m.top.findNode("userFour")
     m.userOne.setFocus(true)
-    m.posterUSer = m.top.findNode("posterUser")
+    m.postersUsers = m.top.findNode("postersUsers")
     m.msWelcome = m.top.findNode("msWelcome")
-    m.secondScreen = m.top.findNode("loadSecondScreen")   
+    m.secondScreen = m.top.findNode("secondScreen")   
 end sub
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
@@ -61,10 +61,9 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
   return handled
 end function
 
-
 sub offFirstScreen()
-        m.msWelcome.visible = false
-        m.posterUSer.visible = false
-        m.secondScreen.visible = true
-    end sub
+    m.msWelcome.visible = false
+    m.postersUsers.visible = false
+    m.secondScreen.visible = true    
+end sub
 

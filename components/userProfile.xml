@@ -25,14 +25,13 @@
             width="0"
             height="0"
             opacity="0.3">
-        <Poster
-            id="userImage"
-            width="309"
-            height="249"
-            visible="true"
-            translation ="[3,2]"/>                           
-    </Rectangle>
-        
+            <Poster
+                id="userImage"
+                width="309"
+                height="249"
+                visible="true"
+                translation="[3,2]"/>                           
+        </Rectangle>   
         <Label 
             id="userName"
             height="30"

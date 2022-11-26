@@ -18,8 +18,7 @@
             <Poster
                 id="posterUser"
                 width="310"
-                height="250" 
-                uri="pkg:/images/usuario1.jpg"/>     
+                height="250" />     
             <Label
                 id="UserName"
                 height="50"
