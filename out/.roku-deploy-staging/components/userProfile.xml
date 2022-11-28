@@ -3,10 +3,8 @@
 <component name="UserProfile" extends="Group" >
 
     <interface>
-        <field id="locateImage" type="string" alias="userImage.uri" />   
-        <field id="colorUser" type="string" alias="userImage.opacity" />
-        <field id="profileName" type="string" alias="userName.text" />
         <field id="pencilHasFocus" type="boolean"/>
+        <field id="content" type="node" onChange="onContentChanged"/>
     </interface>
 
     <script type="text/brightscript" uri="userProfile.brs" /> 

@@ -3,8 +3,12 @@ sub init()
     m.userImage = m.top.findNode("userImage")
     m.userName = m.top.findNode("userName")
     m.editUser = m.top.findNode("editUser")
-
     m.top.observeField("focusedChild", "onFocusedChildChanged")
+end sub
+
+sub onContentChanged()
+m.userImage.uri = m.top.content.HDPosterUrl
+m.userName.text = m.top.content.title
 end sub
 
 sub onFocusedChildChanged()

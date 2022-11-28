@@ -26,21 +26,13 @@
             itemSpacings="[100]"
             visible="true">
             <UserProfile 
-                id="userOne" 
-                locateImage="pkg:/images/usuario1.jpg" 
-                profileName="Fernanda" />
+                id="userOne" />
             <UserProfile 
-                id="userTwo" 
-                locateImage="pkg:/images/usuario2.jpg" 
-                profileName="Mariano" />
+                id="userTwo" />
             <UserProfile 
-                id="userThree" 
-                locateImage="pkg:/images/usuario3.jpg" 
-                profileName="Camila" />
+                id="userThree" />
             <UserProfile 
-                id="userFour" 
-                locateImage="pkg:/images/usuario4.jpg" 
-                profileName="Juan Pablo"/>
+                id="userFour" />
         </LayoutGroup>        
         <EditUserProfile 
             id="secondScreen"
