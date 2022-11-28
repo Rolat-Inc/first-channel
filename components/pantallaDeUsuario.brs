@@ -11,10 +11,10 @@ sub init()
 end sub
 
 sub setUserProfileContent()
-m.userOne.content = createUserProfileContent("Fernanda","pkg:/images/usuario1.jpg")
-m.userTwo.content = createUserProfileContent("Mariano", "pkg:/images/usuario2.jpg")
-m.userThree.content = createUserProfileContent("Camila","pkg:/images/usuario3.jpg")
-m.userFour.content = createUserProfileContent("Juan Pablo","pkg:/images/usuario4.jpg")
+    m.userOne.content = createUserProfileContent("Fernanda","pkg:/images/usuario1.jpg")
+    m.userTwo.content = createUserProfileContent("Mariano", "pkg:/images/usuario2.jpg")
+    m.userThree.content = createUserProfileContent("Camila","pkg:/images/usuario3.jpg")
+    m.userFour.content = createUserProfileContent("Juan Pablo","pkg:/images/usuario4.jpg")
 end sub
 
 function createUserProfileContent(name as string, url as string)
