@@ -3,7 +3,6 @@ sub init()
     m.userImage = m.top.findNode("userImage")
     m.userName = m.top.findNode("userName")
     m.editUser = m.top.findNode("editUser")
-
     m.top.observeField("focusedChild", "onFocusedChildChanged")
 end sub
 
