@@ -11,10 +11,10 @@ sub init()
 end sub
 
 sub setUserProfileContent()
-m.userOne.content = createUserProfileContent("Fernanda","pkg:/images/usuario1.jpg")
-m.userTwo.content = createUserProfileContent("Mariano", "pkg:/images/usuario2.jpg")
-m.userThree.content = createUserProfileContent("Camila","pkg:/images/usuario3.jpg")
-m.userFour.content = createUserProfileContent("Juan Pablo","pkg:/images/usuario4.jpg")
+    m.userOne.content = createUserProfileContent("Fernanda","pkg:/images/usuario1.jpg")
+    m.userTwo.content = createUserProfileContent("Mariano", "pkg:/images/usuario2.jpg")
+    m.userThree.content = createUserProfileContent("Camila","pkg:/images/usuario3.jpg")
+    m.userFour.content = createUserProfileContent("Juan Pablo","pkg:/images/usuario4.jpg")
 end sub
 
 function createUserProfileContent(name as string, url as string)
@@ -31,9 +31,8 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
             if key = "OK" then
                 if  m.userOne.pencilHasFocus = true then
                         offFirstScreen()
-                        m.secondScreen.userEditName = m.userOne.profileName
-                        m.secondScreen.userPoster = m.userOne.locateImage
-                end if    
+                        m.secondScreen.content = m.userOne.content
+                end if   
             else if key = "right" then
                 m.userTwo.setFocus(true)
             end if
@@ -41,8 +40,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
             if key = "OK" then
                 if  m.userTwo.pencilHasFocus = true then
                          offFirstScreen()
-                         m.secondScreen.userEditName = m.userTwo.profileName
-                        m.secondScreen.userPoster = m.userTwo.locateImage
+                         m.secondScreen.content = m.userTwo.content
                 end if
             else if key = "right" then
                 m.userThree.setFocus(true)      
@@ -53,8 +51,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
             if key = "OK" then
                 if  m.userThree.pencilHasFocus = true then
                         offFirstScreen()
-                        m.secondScreen.userEditName = m.userThree.profileName
-                        m.secondScreen.userPoster = m.userThree.locateImage
+                        m.secondScreen.content = m.userThree.content
                 end if
             else if key = "right" then
                 m.userFour.setFocus(true)    
@@ -65,8 +62,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
             if key = "OK" then
                 if  m.userFour.pencilHasFocus = true then
                         offFirstScreen()
-                        m.secondScreen.userEditName = m.userFour.profileName
-                        m.secondScreen.userPoster = m.userFour.locateImage
+                        m.secondScreen.content = m.userFour.content
                 end if               
             else if key = "left" then
                 m.userThree.setFocus(true)
@@ -81,4 +77,3 @@ sub offFirstScreen()
     m.postersUsers.visible = false
     m.secondScreen.visible = true    
 end sub
-

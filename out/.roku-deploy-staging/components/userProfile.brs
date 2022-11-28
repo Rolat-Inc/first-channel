@@ -7,8 +7,8 @@ sub init()
 end sub
 
 sub onContentChanged()
-m.userImage.uri = m.top.content.HDPosterUrl
-m.userName.text = m.top.content.title
+    m.userImage.uri = m.top.content.HDPosterUrl
+    m.userName.text = m.top.content.title
 end sub
 
 sub onFocusedChildChanged()
@@ -35,12 +35,16 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
             m.editUser.setFocus(true)
             if m.editUser.hasFocus()then
                     m.editUser.opacity = "1"  
+                    m.userSelection.width = 0
+                    m.userSelection.height = 0
             end if
             handled = true 
         else if key = "up" 
             m.editUser.setFocus(false)
             m.top.setFocus(true)
             m.editUser.opacity = "0.3"
+            m.userSelection.width = 315
+            m.userSelection.height = 255
         end if
         m.top.pencilHasFocus = m.editUser.hasFocus()
     end if

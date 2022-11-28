@@ -3,8 +3,7 @@
 <component name="EditUserProfile" extends="Group">
 
     <interface>
-        <field id="userEditName" type="string" alias="UserName.text" />   
-        <field id="userPoster" type="string" alias="posterUser.uri" />  
+        <field id="content" type="node" onChange="onContentChanged"/>
     </interface>
     <script type="text/brightscript" uri="EditUserProfile.brs" /> 
 
