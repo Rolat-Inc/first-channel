@@ -18,24 +18,14 @@
             text="¿Quién quiere ver RupertFlix?:"
             translation="[680,200]" 
             visible="true" />
-        <LayoutGroup
-            id="postersUsers"
-            translation="[180, 400]"
-            layoutDirection="horiz"
-            horizAlignment="left"
-            itemSpacings="[100]"
-            visible="true">
-            <UserProfile 
-                id="userOne" />
-            <UserProfile 
-                id="userTwo" />
-            <UserProfile 
-                id="userThree" />
-            <UserProfile 
-                id="userFour" />
-        </LayoutGroup>        
-        <EditUserProfile 
-            id="secondScreen"
-            visible="false"/>   
+        <Rowlist
+            id="usersProfiles"
+            content=""
+            itemSize="[1650, 390]"
+            numRows="1"
+            rowItemSize="[[380,250]]"
+            rowItemSpacing="[[40,0]]"
+            translation="[160,400]" 
+            focusBitmapUri= "pkg:/images/focus_grid.9.png"/>
     </children>
 </component>
