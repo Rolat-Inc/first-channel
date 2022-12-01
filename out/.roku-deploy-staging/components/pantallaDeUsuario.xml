@@ -20,8 +20,8 @@
             visible="true" />
         <Rowlist
             id="usersProfiles"
-            content=""
-            itemSize="[1650, 390]"
+            itemComponentName = "usersItemComponentName"
+            itemSize="[1650, 450]"
             numRows="1"
             rowItemSize="[[380,250]]"
             rowItemSpacing="[[40,0]]"
