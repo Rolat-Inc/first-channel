@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="PantallaDeUsuario" extends="Scene">
+
+    <script type="text/brightscript" uri="pantallaDeUsuario.brs" /> 
+
+    <children>
+        <Poster
+            id="posterFirst"
+            translation="[9,-53]"
+            height="220"
+            width="270" 
+            uri="pkg:/images/firstScenelogo.png" />  
+        <Label
+            id="msWelcome"
+            height="50"
+            color="0xF9F9F9"
+            text="¿Quién quiere ver RupertFlix?:"
+            translation="[680,200]" 
+            visible="true" />
+        <LayoutGroup
+            id="postersUsers"
+            translation="[180, 400]"
+            layoutDirection="horiz"
+            horizAlignment="left"
+            itemSpacings="[100]"
+            visible="true">
+            <UserProfile 
+                id="userOne" 
+                locateImage="pkg:/images/usuario1.jpg" 
+                profileName="Fernanda" />
+            <UserProfile 
+                id="userTwo" 
+                locateImage="pkg:/images/usuario2.jpg" 
+                profileName="Mariano" />
+            <UserProfile 
+                id="userThree" 
+                locateImage="pkg:/images/usuario3.jpg" 
+                profileName="Camila" />
+            <UserProfile 
+                id="userFour" 
+                locateImage="pkg:/images/usuario4.jpg" 
+                profileName="Juan Pablo"/>
+        </LayoutGroup>        
+        <EditUserProfile 
+            id="secondScreen"
+            visible="false"/>   
+    </children>
+</component>

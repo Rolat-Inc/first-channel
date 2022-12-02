@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="EditUserProfile" extends="Group">
+
+    <interface>
+        <field id="userEditName" type="string" alias="UserName.text" />   
+        <field id="userPoster" type="string" alias="posterUser.uri" />  
+    </interface>
+    <script type="text/brightscript" uri="EditUserProfile.brs" /> 
+
+    <children>     
+        <LayoutGroup
+            id="identifyUser"
+            translation="[1540,500]"
+            vertAlignment="top"
+            layoutDirection="vert"
+            horizAlignment="center">
+            <Poster
+                id="posterUser"
+                width="310"
+                height="250" />     
+            <Label
+                id="UserName"
+                height="50"
+                color="0xF9F9F9"
+                text="User"
+                visible="true" />   
+            <Label
+                id="UserLenguage"
+                height="50"
+                color="0xF9F9F9"
+                text="Español"
+                visible="true" /> 
+        </LayoutGroup>
+        <Label
+            height="50"
+            color="0xF9F9F9"
+            text="Edita el perfil"
+            translation="[145,200]" 
+            visible="true" />
+        <Label
+            height="50"
+            color="0x90A17D"
+            text="Selecciona lo que quieras cambiar"
+            translation="[145,240]" 
+            visible="true"  /> 
+        <Group
+            id="selectFieldName"
+            visible="true">
+            <Rectangle
+                id="userSelection"            
+                color="0xFAF7F0"
+                width="307"
+                height="52"   
+                opacity="1"   
+                translation="[140,392]" />                
+            <Rectangle
+                color="0x000000"
+                width="304"
+                height="48"   
+                opacity="1"   
+                translation="[141,394]" />    
+        </Group>              
+        <Label
+            height="50"
+            color="0xF9F9F9"
+            text="Nombre"
+            visible="true"
+            translation="[145,400]" />
+        <Group
+            id="selectFieldIcon"
+            visible="false">
+            <Rectangle
+                id="userSelection"            
+                color="0xFAF7F0"
+                width="307"
+                height="52"   
+                opacity="1"   
+                translation="[140,471]" />                
+            <Rectangle
+                color="0x000000"
+                width="304"
+                height="48"   
+                opacity="1"   
+                translation="[141,473]" />    
+        </Group>  
+        <Label
+            height="50"
+            color="0xF9F9F9"
+            text="Ícono"
+            visible="true" 
+            translation="[145,480]" />  
+        <Group
+            id="selectFieldLenguage"
+            visible="false">
+            <Rectangle
+                id="userSelection"            
+                color="0xFAF7F0"
+                width="307"
+                height="52"   
+                opacity="1"   
+                translation="[140,552]" />                
+            <Rectangle
+                color="0x000000"
+                width="304"
+                height="48"   
+                opacity="1"   
+                translation="[141,554]" />    
+        </Group>  
+        <Label
+            height="50"
+            color="0xF9F9F9"
+            text="Idioma"
+            visible="true" 
+            translation="[145,560]"/>                   
+        <Label
+            height="50"
+            color="0xF9F9F9"
+            text="Mostrar títulos de todas las clasificaciones por edad en este perfíl."
+            translation="[145,800]" 
+            visible="true" />
+        <Group
+            id="selectFieldUser"
+            visible="true">
+            <Rectangle
+                id="userSelection"            
+                color="0x90A17D"
+                width="307"
+                height="52"   
+                opacity="0.4"   
+                translation="[138,891]" />                       
+            <Rectangle
+                color="0x000000"
+                width="304"
+                height="48"   
+                opacity="1"   
+                translation="[140,893]" />    
+        </Group>     
+        <Label
+            height="50"
+            color="0xF9F9F9"
+            text="Listo"
+            translation="[145,900]" 
+            visible="true" />                    
+    </children>
+</component>
