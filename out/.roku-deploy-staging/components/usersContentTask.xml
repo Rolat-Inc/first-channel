@@ -4,6 +4,7 @@
 
     <interface>
         <field id="output" type="node" />
+        <field id="url" type="string" />
     </interface>
     <script type="text/brightscript" uri="usersContentTask.brs" /> 
  

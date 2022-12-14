@@ -1,45 +1,32 @@
 sub init()
-    m.top.functionName = "createRowListContent"
+    m.top.functionName = "importUsersData"
 end sub
-
-function createRowListContent()
-
-    usersMetadata = createObjectUsersInfo()
-    usersProfilesContentFather = CreateObject("RoSGNode","ContentNode")
-    usersInfoChild = usersProfilesContentFather.createChild("ContentNode")
   
-    for i = 0 to usersMetadata.users.count() - 1
-      userContent = usersMetadata.users [i]
-  
-      userProfilesContentGrandChild = usersInfoChild.createChild("ContentNode")
-      userProfilesContentGrandChild.title = userContent.name
-      userProfilesContentGrandChild.HDPOSTERURL = userContent.image
-    end for
-    m.top.output = usersProfilesContentFather
+function importUsersData()
+  request = CreateObject("roUrlTransfer")
+  request.SetCertificatesFile("common:/certs/ca-bundle.crt")
+  request.AddHeader("X-Roku-Reserved-Dev-Id", "")
+  request.AddHeader("X-RapidAPI-Key", "36bc968a0fmsh43df5fc25d35121p18b039jsn5fc1cb60412d")
+  request.AddHeader("X-RapidAPI-Host", "api-nba-v1.p.rapidapi.com")
+  request.InitClientCertificates()
+  request.SetUrl(m.top.url) 
+  answerApi = ParseJson(request.GetToString()) 
+
+  createUsersContentNodeApi(answerApi)
 end function
 
-function createObjectUsersInfo()
-    usersMetadata = {
-      users: [
-        {
-          "name": "Fernanda",
-          "image": "pkg:/images/usuario1.jpg"
-        },
-        {
-          "name":"Mariano",
-          "image":"pkg:/images/usuario2.jpg"
-        },
-        {
-          "name":"Camila",
-          "image":"pkg:/images/usuario3.jpg"
-        },
-        {
-          "name":"Juan Pablo",
-          "image":"pkg:/images/usuario4.jpg"
-        } 
-      ]
-    }
-    return usersMetadata
-end function
-  
-  
+sub createUsersContentNodeApi(answerApi as object)
+
+  usersProfilesContentFather = CreateObject("RoSGNode","ContentNode")
+  usersInfoChild = usersProfilesContentFather.createChild("ContentNode")
+
+  for i = 0 to answerApi.response.count()-60
+    userContent = answerApi.response[i]
+
+    userProfilesContentGrandChild = usersInfoChild.createChild("ContentNode")
+    userProfilesContentGrandChild.title = userContent.nickname
+    userProfilesContentGrandChild.HDPOSTERURL = userContent.logo
+
+  end for
+  m.top.output = usersProfilesContentFather
+end sub

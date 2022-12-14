@@ -5,6 +5,7 @@ end sub
 
 sub createUserContentTask()
   m.userContentTask = CreateObject("roSGNode", "usersContentTask")
+  m.userContentTask.url = "https://api-nba-v1.p.rapidapi.com/teams"
   m.userContentTask.observeField("output", "onUserContentTaskCheanged")
   m.userContentTask.control = "RUN"
 end sub

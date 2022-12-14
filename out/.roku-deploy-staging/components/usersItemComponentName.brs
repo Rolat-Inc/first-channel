@@ -5,8 +5,8 @@ sub init()
 end sub
 
 sub OnWidthChanged()
-    m.usersProfiles.width = m.top.width
-    m.usersProfiles.height = m.top.height
+    m.usersProfiles.width = 380
+    m.usersProfiles.height = 250
 end sub
 
 sub OnitemContentChanged()
