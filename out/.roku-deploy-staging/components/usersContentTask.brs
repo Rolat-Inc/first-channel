@@ -10,19 +10,20 @@ function importUsersData()
   request.AddHeader("X-RapidAPI-Host", "api-nba-v1.p.rapidapi.com")
   request.InitClientCertificates()
   request.SetUrl(m.top.url) 
-  answerApi = ParseJson(request.GetToString()) 
+  responseApi = ParseJson(request.GetToString()) 
 
-  createUsersContentNodeApi(answerApi)
+  createUsersContentNodeApi(responseApi)
+end function
 
-  end function
+sub createUsersContentNodeApi(responseApi as object)
 
-sub createUsersContentNodeApi(answerApi as object)
+  usersProfilesContentFather = CreateObject("RoSGNode","ContentNode")
+  usersInfoChild = usersProfilesContentFather.createChild("ContentNode")
 
- usersProfilesContentFather = CreateObject("RoSGNode","ContentNode")
- usersInfoChild = usersProfilesContentFather.createChild("ContentNode")
-
-  for i = 0 to answerApi.response.count()-60
-    userContent = answerApi.response[i]
+  usersCounterArray = responseApi.response.count() - responseApi.response.count() +3
+  
+  for i = 0 to usersCounterArray
+    userContent = responseApi.response[i]
 
     userProfilesContentGrandChild = usersInfoChild.createChild("ContentNode")
     userProfilesContentGrandChild.title = userContent.nickname

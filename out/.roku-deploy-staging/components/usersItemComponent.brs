@@ -4,12 +4,12 @@ sub init()
     m.userName = m.top.findNode("userName")
 end sub
 
-sub OnWidthChanged()
+sub onWidthChanged()
     m.usersProfiles.width = 380
     m.usersProfiles.height = 250
 end sub
 
-sub OnitemContentChanged()
+sub onitemContentChanged()
     m.usersProfiles.uri = m.top.itemContent.HDPOSTERURL
     m.userName.text = m.top.itemContent.title
 end sub 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<component name="usersContentTask" extends="Task">
+<component name="UsersContentTask" extends="Task">
 
     <interface>
         <field id="output" type="node" />
