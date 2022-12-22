@@ -19,10 +19,8 @@ sub createUsersContentNodeApi(responseApi as object)
 
   usersProfilesContentFather = CreateObject("RoSGNode","ContentNode")
   usersInfoChild = usersProfilesContentFather.createChild("ContentNode")
-
-  usersCounterArray = responseApi.response.count() - responseApi.response.count() +3
   
-  for i = 0 to usersCounterArray
+  for i = 0 to 3
     userContent = responseApi.response[i]
 
     userProfilesContentGrandChild = usersInfoChild.createChild("ContentNode")

@@ -3,7 +3,8 @@
 <component name="UsersItemComponent" extends="Group">
 
     <interface>
-        <field id="width" type="float" OnChange="onWidthChanged" />
+        <field id="width" type="float"/>
+        <field id="height" type="float" OnChange="onHeightChanged" />
         <field id="itemContent" type="node" OnChange="onitemContentChanged"/>
     </interface>
 
@@ -16,12 +17,12 @@
         horizAlignment="left" 
         vertAlignment="top" >
         <Poster 
-            id="usersProfiles">
+            id="userProfile">
             <label
                 id="userName"
                 translation= "[110,270]"/>        
             <Poster 
-                id="editUsersProfiles"
+                id="editUserProfile"
                 uri="pkg:/images/chooseProfile.jpg"
                 translation="[140, 370]"
                 opacity="0.3" />
