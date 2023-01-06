@@ -6,7 +6,9 @@
         <field id="width" type="float"/>
         <field id="height" type="float" OnChange="onHeightChanged" />
         <field id="itemContent" type="node" OnChange="onitemContentChanged"/>
-    </interface>
+        <field id="itemHasFocus" type="boolean" OnChange="onitemFocusChanged"/>
+        
+    </interface>    
 
     <script type="text/brightscript" uri="usersItemComponent.brs" /> 
  
@@ -25,8 +27,52 @@
                 id="editUserProfile"
                 uri="pkg:/images/chooseProfile.jpg"
                 translation="[140, 370]"
-                opacity="0.3" />
+                opacity="0.3"
+                 />
         </Poster>
     </LayoutGroup>
+    <Group
+        id="DataUserScreen"
+        visible="false">
+
+        <Label
+            id="userDataName"
+            height="50"
+            color="0xFFF6C3"
+            translation="[280,150]" 
+            font="font:LargeBoldSystemFont" />
+
+        <LayoutGroup
+            layoutDirection="vert"
+            vertAlignment="center"
+            itemSpacings="[50]"
+            translation="[550,550]" >
+
+            <Poster
+                id="posterUser"
+                uri=""
+                width="900"
+                height="500">
+                <Poster
+                    id="posterUser"
+                    uri="pkg:/images/playIcon.webp"
+                    width="300"
+                    height="270"
+                    translation="[300,120]"/>  
+            </Poster>        
+
+            <Label
+                height="0"
+                width="920"
+                numLines="4"
+                lineSpacing="10"
+                color = "0xEEEEEE"
+                text = "Mostrar títulos de todas las clasificaciones por edad en este perfíl akksdfskfd dsdifdsifdsi ksdksdfk fdksdf kfds ksdf kdskdsf fdsk sdfk sdfk sdfk sdfk fdsk sdfk sdfk dsfk sdf final"
+                wrap="true"
+                horizAlign = "center"
+                vertAlign = "center"
+                font = "font:SmallestSystemFont" />
+        </LayoutGroup>
+    </Group>
     </children>
 </component>

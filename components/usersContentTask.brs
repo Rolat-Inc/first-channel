@@ -26,7 +26,8 @@ sub createUsersContentNodeApi(responseApi as object)
     userProfilesContentGrandChild = usersInfoChild.createChild("ContentNode")
     userProfilesContentGrandChild.title = userContent.nickname
     userProfilesContentGrandChild.HDPOSTERURL = userContent.logo
-
-  end for
+    userProfilesContentGrandChild.addField("drawPencilEdit", "boolean", false) 
+    userProfilesContentGrandChild.setField("drawPencilEdit",false)
+    end for
   m.top.output = usersProfilesContentFather
 end sub
