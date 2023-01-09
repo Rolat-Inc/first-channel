@@ -2,7 +2,8 @@
 
 <component name="CustomizedRowlist" extends="rowlist">
 
-    <script type="text/brightscript" uri="customizedRowlist.brs" /> 
-     <children>
-     </children>
+     <script type="text/brightscript" uri="customizedRowlist.brs" /> 
+
+    <children>
+    </children>
 </component>

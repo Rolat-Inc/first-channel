@@ -1,5 +1,5 @@
 sub init()
-    
+
 end sub
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
@@ -7,15 +7,16 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
     handled = false   
     if (press) then                         
         if (key = "down") then       
-            m.top.focusBitmapUri=""    
-            m.itemFocused.drawPencilEdit=true
-        else if m.itemFocused.drawPencilEdit=true and key = "OK" then
-                print "Desplegar segunda pantalla"
+            m.top.focusBitmapUri = ""    
+            m.itemFocused.drawPencilEdit = true
+        else if (m.itemFocused.drawPencilEdit = true and key = "OK") then
+            m.itemFocused.displayDetailScreen = true
         else       
-            m.top.focusBitmapUri="pkg:/images/focus_grid.9.png"   
-            m.itemFocused.drawPencilEdit=false
+            m.top.focusBitmapUri ="pkg:/images/focus_grid.9.png"   
+            m.itemFocused.drawPencilEdit = false
         end if
     end if
     return handled
 end function
+
 
