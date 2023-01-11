@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<component name="PantallaDeUsuario" extends="Scene">
+<component name="MainScreen" extends="Scene">
 
-    <script type="text/brightscript" uri="pantallaDeUsuario.brs" /> 
+    <script type="text/brightscript" uri="mainScreen.brs" /> 
 
     <children>
         <Poster
             id="posterFirst"
-            translation="[9,-53]"
-            height="220"
-            width="270" 
-            uri="pkg:/images/firstScenelogo.png" 
-            visible="false"/>  
+            translation="[30,20]"
+            height="100"
+            width="140" 
+            uri="pkg:/images/logoScreen.png" 
+            visible="true"/>  
         <Label
             id="msWelcome"
             height="50"
             color="0xEB455F"
-            text="Chose your favorite NBA team to know its information:"
+            text="Click on your favorite NBA team image to see a video or click on hand icon to know its information:"
             translation="[350,200]" 
-            font = "font:LargeBoldSystemFont"/>
+            font = "font:SmallestSystemFont"/>
         <CustomizedRowlist
             id="usersProfiles"
             itemComponentName = "usersItemComponent"
@@ -28,32 +28,33 @@
             rowItemSpacing="[[40,0]]"
             translation="[160,400]" 
             focusBitmapUri= "pkg:/images/focus_grid.9.png"
-            visible="true"/>
+            visible="true"/>          
+        <Video
+            id="exampleVideo"
+            width="1920"
+            height="1080"
+            visible = "false"/>
     <Group
         id="DataUserScreen"
         visible="false">
-
         <Label
             id="userDataName"
             height="70"
             color="0xEB455F"
             translation="[280,150]" 
             font="font:LargeBoldSystemFont" />
-
         <LayoutGroup
             layoutDirection="vert"
             vertAlignment="center"
             horizAlignment= "center"
             itemSpacings="[50]"
             translation="[1000,550]" >
-
             <Poster
                 id="posterDataUser"
                 uri=""
-                width="580"
-                height="450">
+                width="550"
+                height="400">
             </Poster>        
-
             <Label
                 id="TeamsData"
                 height="0"
@@ -65,15 +66,20 @@
                 horizAlign = "center"
                 vertAlign = "center"
                 font = "font:LargeBoldSystemFont" />
-
             <Label
                 text="PRESS BACK TO RETURN"
                 font="font:SmallestSystemFont"
                 height="10"
-                color="0xEB455F"/>
-       
+                color="0xEB455F"/>     
         </LayoutGroup>      
     </Group>    
+            <Label
+            id="msWelcome"
+            height="10"
+            color="0xEFEFEF"
+            text="Demo chanel created by Farith Romero"
+            translation="[1300,1000]" 
+            font = "font:SmallestSystemFont"/>
     </children>
 </component>
 

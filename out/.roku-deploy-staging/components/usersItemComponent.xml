@@ -6,7 +6,6 @@
         <field id="width" type="float"/>
         <field id="height" type="float" OnChange="onHeightChanged" />
         <field id="itemContent" type="node" OnChange="onitemContentChanged"/>
-                
     </interface>    
 
     <script type="text/brightscript" uri="usersItemComponent.brs" /> 
