@@ -3,9 +3,10 @@
 <component name="UsersItemComponent" extends="Group">
 
     <interface>
-        <field id="width" type="float" OnChange="onWidthChanged" />
+        <field id="width" type="float"/>
+        <field id="height" type="float" OnChange="onHeightChanged" />
         <field id="itemContent" type="node" OnChange="onitemContentChanged"/>
-    </interface>
+    </interface>    
 
     <script type="text/brightscript" uri="usersItemComponent.brs" /> 
  
@@ -14,15 +15,17 @@
         id="userComponentsAlignment"
         layoutDirection="vert"
         horizAlignment="left" 
-        vertAlignment="top" >
+        vertAlignment="top"
+        visible= "true" >
         <Poster 
-            id="usersProfiles">
+            id="userProfile">
             <label
                 id="userName"
+                color="0x2B3467"
                 translation= "[110,270]"/>        
             <Poster 
-                id="editUsersProfiles"
-                uri="pkg:/images/chooseProfile.jpg"
+                id="editUserProfile"
+                uri="pkg:/images/chooseProfile.png"
                 translation="[140, 370]"
                 opacity="0.3" />
         </Poster>

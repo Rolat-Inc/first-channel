@@ -6,7 +6,7 @@
         <field id="width" type="float"/>
         <field id="height" type="float" OnChange="onHeightChanged" />
         <field id="itemContent" type="node" OnChange="onitemContentChanged"/>
-    </interface>
+    </interface>    
 
     <script type="text/brightscript" uri="usersItemComponent.brs" /> 
  
@@ -15,15 +15,17 @@
         id="userComponentsAlignment"
         layoutDirection="vert"
         horizAlignment="left" 
-        vertAlignment="top" >
+        vertAlignment="top"
+        visible= "true" >
         <Poster 
             id="userProfile">
             <label
                 id="userName"
+                color="0x2B3467"
                 translation= "[110,270]"/>        
             <Poster 
                 id="editUserProfile"
-                uri="pkg:/images/chooseProfile.jpg"
+                uri="pkg:/images/chooseProfile.png"
                 translation="[140, 370]"
                 opacity="0.3" />
         </Poster>
