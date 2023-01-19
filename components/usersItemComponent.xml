@@ -24,7 +24,7 @@
                 color="0x2B3467"
                 translation= "[110,270]"/>        
             <Poster 
-                id="editUserProfile"
+                id="dataUserProfile"
                 uri="pkg:/images/chooseProfile.png"
                 translation="[140, 370]"
                 opacity="0.3" />

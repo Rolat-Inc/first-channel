@@ -2,9 +2,9 @@ sub init()
 end sub
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
-    m.itemFocused = m.top.content.getChild(m.top.rowItemFocused[0]).getChild(m.top.rowItemFocused[1])
     handled = false   
     if (press) then   
+        m.itemFocused = m.top.content.getChild(m.top.rowItemFocused[0]).getChild(m.top.rowItemFocused[1])
         if key = "OK" then
             m.itemFocused.displayVideo = true
           end if                       

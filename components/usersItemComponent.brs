@@ -1,6 +1,6 @@
 sub init()
     m.userProfile = m.top.findNode("userProfile")
-    m.editUserProfile = m.top.findNode("editUserProfile")
+    m.dataUserProfile = m.top.findNode("dataUserProfile")
     m.userName = m.top.findNode("userName")
     m.firstScreen = m.top.findNode("userComponentsAlignment")
 end sub
@@ -15,8 +15,8 @@ sub onitemContentChanged()
     m.userName.text = m.top.itemContent.title
 
     if m.top.itemContent.drawPencilEdit = true then
-        m.editUserProfile.opacity = 1
+        m.dataUserProfile.opacity = 1
     else if m.top.itemContent.drawPencilEdit = false then
-        m.editUserProfile.opacity = 0.3
+        m.dataUserProfile.opacity = 0.3
     end if
 end sub 
