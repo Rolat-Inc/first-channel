@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="UsersItemComponent" extends="Group">
+
+    <interface>
+        <field id="width" type="float"/>
+        <field id="height" type="float" OnChange="onHeightChanged" />
+        <field id="itemContent" type="node" OnChange="onitemContentChanged"/>
+    </interface>
+
+    <script type="text/brightscript" uri="usersItemComponent.brs" /> 
+ 
+    <children>
+    <LayoutGroup
+        id="userComponentsAlignment"
+        layoutDirection="vert"
+        horizAlignment="left" 
+        vertAlignment="top" >
+        <Poster 
+            id="userProfile">
+            <label
+                id="userName"
+                translation= "[110,270]"/>        
+            <Poster 
+                id="editUserProfile"
+                uri="pkg:/images/chooseProfile.jpg"
+                translation="[140, 370]"
+                opacity="0.3" />
+        </Poster>
+    </LayoutGroup>
+    </children>
+</component>
